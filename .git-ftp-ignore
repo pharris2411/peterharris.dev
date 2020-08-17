@@ -1,0 +1,16 @@
+.gitignore
+*/.gitignore      # ignore files in sub directories
+*/.gitkeep
+.git-ftp-ignore
+.git-ftp-include
+.gitlab-ci.yml
+src/*
+static/*
+scripts/*
+jest/*
+gatsby/*
+flow-typed/*
+flow/*
+content/*
+.github/*
+.circleci/*
