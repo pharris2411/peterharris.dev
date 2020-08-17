@@ -28,6 +28,10 @@
 
     }
 
+    &-image {
+      width: 75%;
+      margin:0 auto;
+    }
     &-description {
       font-size: $typographic-base-font-size;
       @include line-height(1);
