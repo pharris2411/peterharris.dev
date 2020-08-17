@@ -27,18 +27,15 @@ jobs:
       run: npm install
 
     # Runs a set of commands using the runners shell
-    - name: Run npm build
-      run: npm build
+    - name: Run npm run build
+      run: npm run build
       
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
         ftp-server: ${{ secrets.FTP_HOST }}
-        # FTP account username
         ftp-username: ${{ secrets.FTP_USER }}
-        # FTP account password
         ftp-password: ${{ secrets.FTP_PASS }}
-        # The local folder to copy, defaults to root project folder
-        local-dir: ./public/
         known-hosts: ${{ secrets.FTP_KEY }}
+        local-dir: public/
+
