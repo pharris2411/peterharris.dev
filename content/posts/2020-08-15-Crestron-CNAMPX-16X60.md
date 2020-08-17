@@ -141,11 +141,11 @@ The actual protocol is a bit of a mystery to me still. I'll cover this a bit on 
 
 > Powering on the amp for the first time to test all the channels. At this point I was battery powering everything else connected to it in case anything went wrong.
 
-To do anything with the CNAMPX-16X60 I had to power on the Cresnet board first. The official spec requires 24 volts DC power, but luckily it was perfectly happy with only 19 volts -- which was great since I have a large collection of old laptop power supplies. Once I connected power I hit the "bypass" button on the back of the amp, and heard all the relays click to life. 
+To do anything with the CNAMPX-16X60 I had to power on the Cresnet board first. The official spec requires 24 volts DC power, but luckily it was perfectly happy with only 19 volts -- which was great since I have a large collection of old laptop power supplies. Once I connected power I hit the "override" button on the back of the amp, and heard all the relays click to life. 
 
 Success!
 
-But this wasn't really a final solution by any means. The bypass button is a nice workaround if you don't have a full Crestron install, but it's necessary to hit that button any time the Cresnet power source resets. While that could be as rare as the occasional power outage... leaving the amp on 24x7 would waste electricity and generate unnecessary heat. This amp idles at around 150 watts so it's not insignificant!
+But this wasn't really a final solution by any means. The override button is a nice workaround if you don't have a full Crestron install, but it's necessary to hit that button any time the Cresnet power source resets. While that could be as rare as the occasional power outage... leaving the amp on 24x7 would waste electricity and generate unnecessary heat. This amp idles at around 150 watts so it's not insignificant!
 
 Ultimately, I needed a better way to control the amp's power state.
 
@@ -160,18 +160,18 @@ Let's see what's inside! The bulk of this amp is the two massive toroidal transf
 
 On the far side we find the Cresnet board that controls everything. Given all the protection and diagnostics this board is capable of, I wanted to keep it intact as much as possible. Other users have done much more extensive modifications to this amp including replacing relays or even removing relays entirely. This is not only a more expensive and time consuming modification, but removing the relays prevents short circuit protection from kicking in and could lead to the amp frying itself.
 
-First I focused on trying to understand how the bypass button worked. I began tracing contacts and looking for solder points. My first hunch was if I could possibly just bridge the connections for the bypass button so it's always pressed -- unfortunately this simple solution didn't work. Through experimentation I found that once the Cresnet board gets power it takes 3-5 seconds for the bypass button to activate. Pressing it any sooner or powering on Cresnet with it already pressed does nothing. Alright, so I need a timer circuit of some sort.
+First I focused on trying to understand how the override button worked. I began tracing contacts and looking for solder points. My first hunch was if I could possibly just bridge the connections for the override button so it's always pressed -- unfortunately this simple solution didn't work. Through experimentation I found that once the Cresnet board gets power it takes 3-5 seconds for the override button to activate. Pressing it any sooner or powering on Cresnet with it already pressed does nothing. Alright, so I need a timer circuit of some sort.
 
 ![](/media/crestron/IMG_9979.jpeg)
 
 I busted out an old Arduino I wasn't using for anything else and managed to track down the following points on the board:
 
-* Bypass button (white wire)
+* Override button (white wire)
 * 5V DC power (red wire)
 * Ground (black wire)
 * 5V DC power than engages when the amp is turned on, used to light a status LED (white wire that switches into blue... was running out of colors!)
 
-With these combined it was trivial to throw together some code on the Arduino that runs any time Cresnet gets power. The code starts off just waiting for 5 seconds, then reads the current status of the amp and then "presses" the bypass button by connecting it to ground briefly. The extra check of reading the current status helps protect against false positives or unexpected behavior if an external user hits the bypass button manually first.
+With these combined it was trivial to throw together some code on the Arduino that runs any time Cresnet gets power. The code starts off just waiting for 5 seconds, then reads the current status of the amp and then "presses" the override button by connecting it to ground briefly. The extra check of reading the current status helps protect against false positives or unexpected behavior if an external user hits the override button manually first.
 
 ![](/media/crestron/IMG_9981.jpeg)
 
