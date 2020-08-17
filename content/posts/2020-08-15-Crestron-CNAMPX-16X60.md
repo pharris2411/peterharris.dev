@@ -175,7 +175,7 @@ With these combined it was trivial to throw together some code on the Arduino th
 
 ![](/media/crestron/IMG_9981.jpeg)
 
-Installed, and working great! I got my sister to help me carry the amp down to the basement and load it in the AV rack. I have a beefy Panamax powerstrip that has built in 12V trigger support already, so I plugged the laptop power supply into that and plugged that into the Cresnet power socket. The Emotiva XMC-1 processor has 12V trigger output, so when I turn that on or off, the amps in my stack follow suit now. 
+Installed, and working great! I got my sister to help me carry the amp down to the basement and load it in the AV rack. I have a beefy Panamax power-strip that has built in 12V trigger support already, so I plugged the laptop power supply into that and plugged that into the Cresnet power socket. The Emotiva XMC-1 processor has 12V trigger output, so when I turn that on or off, the amps in my stack follow suit now. 
 
 Bing, bang, boom, 12V controlled Crestron! 
 
@@ -213,7 +213,7 @@ Alas, as soon as I powered it up... something was wrong. My old nemesis ground l
 
 The balanced connections from the XMC-1 were mostly immune to this issue thankfully, though I did have issues with the XPA-5. I solved those with using a few [XLR ground pin lifters.](https://www.amazon.com/Hosa-GLT-255-Female-Ground-Stopper/dp/B00FC4YPL4)  (Some amps like those from Parasound actually have this feature built in with some optional switches!) If I recall correctly, I only needed two of these to resole the issues, despite having 5 XLR interconnects between the XMC-1 and XPA-5.
 
-But now with the Crestron in the mix I was using the unbalanced ouputs from the XMC-1 for the surround speakers, and the interference was back with a vengence. If I fired up a game on my PC the surround channels would emit an awful screeching noise that easily over powered any real content. This simply would not do. 
+But now with the Crestron in the mix I was using the unbalanced outputs from the XMC-1 for the surround speakers, and the interference was back with a vengeance. If I fired up a game on my PC the surround channels would emit an awful screeching noise that easily over powered any real content. This simply would not do. 
 
 ![](/media/crestron/IMG_9984.jpeg)
 
@@ -327,7 +327,7 @@ The MQTT part is relatively easy in the code. It both subscribes to a topic to l
 	}
 	
 	// there's some more MQTT handling code but this is the fun stuff
-	
+
 
 The last part was controlling the output of our 19V DC. At first I put together the circuit with a mosfet, having just succesfully implemented an LED controller in a [Tetris Light](https://www.amazon.com/Bitopbi-Stackable-Induction-Interlocking-Lighting/dp/B07FVTCKDG) using the same technique of an ESP8266 controlling a mosfet (though that one faded in and out very nicely -- this would just be a hard on or off.)
 
