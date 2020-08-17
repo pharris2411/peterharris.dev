@@ -30,6 +30,9 @@ jobs:
     - name: Run npm run build
       run: npm run build
       
+    - name: List output files
+      run: ls
+      
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
