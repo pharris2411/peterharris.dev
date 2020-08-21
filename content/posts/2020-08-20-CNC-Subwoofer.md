@@ -103,7 +103,38 @@ I wanted to replicate the same precision with my next build, and a friend of min
 
 Ultimately the design is still fundamentally the same as the subwoofers I built a few years prior, the external dimensions and port tuning are all identical. But the inside is where things differ the most, and it now features a super strong internal bracing structure.
 
+![](/media/subwoofer/sub1.png)
+
+> A view without the braces in place, you can see each the dado grooves carved into each side panel and the base.
+
+![](/media/subwoofer/sub2.png)
+
+> A view with the braces, 5 interlocking pieces that provide a ton of strength to help the cabinet from resonating.
+
+![](/media/subwoofer/sub3.png)
+
+> A view with everything in place. The nice wood texture is just for show since it'll all be painted black.
 
 # CNCing them
 
+Description coming soon...
+
+![](/media/subwoofer/IMG_1060.jpeg)
+
+![](/media/subwoofer/IMG_1068.jpeg)
+
+![](/media/subwoofer/IMG_1071.jpeg)
+
+![](/media/subwoofer/IMG_1065.jpeg)
+
 # Assembly time!
+
+Description coming soon...
+
+![](/media/subwoofer/IMG_1077.jpeg)
+
+![](/media/subwoofer/IMG_1075.jpeg)
+
+![](/media/subwoofer/IMG_1175.jpeg)
+
+![](/media/subwoofer/IMG_1190.jpeg)
