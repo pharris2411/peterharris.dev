@@ -158,9 +158,10 @@ Finally, it was time to turn turn my virtual drawings into something real! I too
 
 I worked with the shop hand to double check my final VCarve settings, and we ended up tweaking a bunch of feed rate settings and things based on his experience with the machines. We loaded up the material and fired it up.
 
-![](/media/subwoofer/IMG_1060.jpeg)
 
-It was *immensely* satisfying watching this robot dance around and bring project come to life after nearly a year of planning.
+<video src="/media/subwoofer/cnc.mp4" loop="true" autoplay="true" muted="true"></video>
+
+It was *immensely* satisfying watching this robot dance around and see my project come to life after nearly a year of planning.
 
 ![](/media/subwoofer/IMG_1068.jpeg)
 
